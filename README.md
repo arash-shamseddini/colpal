@@ -24,8 +24,20 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(colpal)
-## basic example code
+library(ggplot2)
+
+# Creating a sample bar plot using edi_cols function
+ggplot(mpg, aes(x= class)) + geom_bar(fill=edi_cols("Warm Blue")) + # Using Warm Blue (as EDI Primary color)
+  ggtitle("Number of cars in each class") +
+  ylab("Count") + xlab("Class") +                                                   
+  theme(axis.line = element_line(),   # Removing grids, backgroun color & borders
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank())
 ```
+
+<img src="man/figures/README-example-1.png" width="100%" />
 
 What is special about using `README.Rmd` instead of just `README.md`?
 You can include R chunks like so:
