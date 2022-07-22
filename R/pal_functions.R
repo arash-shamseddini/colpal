@@ -17,7 +17,7 @@ edi_cols_vec <- c(
 #'
 #' @examples
 #' edi_cols("Warm Blue")
-#' edi_cols("Burnt Orange)
+#' edi_cols("Burnt Orange")
 edi_cols <- function(...) {
   cols <- c(...)
 

@@ -1,13 +1,14 @@
 Package: colpal
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Add EDI-themed colors to the plots 
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Arash Shamseddini
+Maintainer: Arash Shamseddini <ashamseddini@edynamics.com>
+Description: Functions to add EDI colors with a single line of code to 
+    base R and ggplot2 objects.
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 2.10)
+RoxygenNote: 7.2.0
