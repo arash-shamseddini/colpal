@@ -31,10 +31,10 @@ library(colpal)
 library(ggplot2)
 
 # Creating a sample bar plot using edi_cols function
-ggplot(mpg, aes(x= class)) + geom_bar(fill=edi_cols("Warm Blue")) + # Using Warm Blue (as EDI Primary color)
+ggplot(mpg, aes(x = class)) + geom_bar(fill = edi_cols("Warm Blue")) + # Using Warm Blue (as EDI Primary color)
   ggtitle("Number of cars in each class") +
   ylab("Count") + xlab("Class") +                                                   
-  theme(axis.line = element_line(),   # Removing grids, backgroun color & borders
+  theme(axis.line = element_line(),   # Removing grids, background color & borders
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
