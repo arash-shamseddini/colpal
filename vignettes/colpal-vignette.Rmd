@@ -143,9 +143,9 @@ and returns an interpolation of the given palette in form of hex codes.
 edi_pal("main")(9)
 ```
 
-This interpolation of hex codes belong to an spectrum shown in Figure \@ref(fig:sample-palette-3).
+This interpolation of hex codes belong to an spectrum shown in Figure \@ref(fig:sample-palette-1).
 
-```{r sample-palette-3, echo=FALSE, fig.align='center', fig.cap='Nine shades of "main" palette'}
+```{r sample-palette-1, echo=FALSE, fig.align='center', fig.cap='Nine shades of "main" palette'}
 
 # Embedding image
 knitr::include_graphics('images/main.jpg')
