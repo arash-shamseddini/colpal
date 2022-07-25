@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# colpal <a href="https://edynamics.com/"><img src="man/figures/logo.PNG" align="right" height="200" width="200" /></a>
+# colpal <a href="https://edynamics.com/"><img src="man/figures/logo.PNG" align="right" height="139" width="300" /></a>
 
 <!-- badges: start -->
 
