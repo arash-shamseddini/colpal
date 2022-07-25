@@ -14,7 +14,7 @@ edi_cols_vec <- c(
 #' Function to extract EDI colors as hex codes from edi_cols_vec
 #'
 #' @param ... Character names of "edi_cols_vec" vector: Any one of
-#'     "Warm Blue", "Burnt Orange" or "Dark Blue"
+#'     "Warm Blue", "Burnt Orange" or "Dark Blue" or combination thereof
 #'
 #' @return HEX code of the selected color
 #' @export
@@ -23,7 +23,18 @@ edi_cols_vec <- c(
 #' edi_cols("Warm Blue")
 #' edi_cols("Burnt Orange")
 edi_cols <- function(...) {
+
   cols <- c(...)
+
+  # Tests whether input length is maximum three
+  if(length(cols) > 3){
+    stop("Please pick at most three EDI colors: 'Warm Blue', 'Burnt Orange' or 'Dark Blue'")
+  }
+
+  # Tests whether input is one of the three available options
+  if(!('Warm Blue' %in% cols) & !('Burnt Orange' %in% cols) & !('Dark Blue' %in% cols)){
+    stop("Please pick an EDI color: 'Warm Blue', 'Burnt Orange' or 'Dark Blue' or their combination")
+  }
 
   if (is.null(cols)) return (edi_cols_vec)
 
@@ -56,6 +67,32 @@ edi_palettes <- list(
 #'
 #' @examples
 edi_pal <- function(palette = "main", reverse = FALSE, ...) {
+
+  # Tests whether the size of the palette is not zero
+  if((length(palette) == 0)){
+    stop("Please pick at least one palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether the size of the palette is maximum one
+  if((length(palette) != 1)){
+    stop("Please pick just one palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether input palette is one of the three available options
+  if(!(palette %in% c("main", "blue", "mixed"))){
+    stop("Please pick from an existing palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether reverse is TRUE or FALSE
+  if(!(is.logical(reverse))){
+    stop("'reverse' argument is either TRUE or FALSE")
+  }
+
+  # Tests whether reverse is the right size
+  if((length(reverse) != 1)){
+    stop("'reverse' argument is either TRUE or FALSE")
+  }
+
   pal <- edi_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
@@ -80,6 +117,42 @@ edi_pal <- function(palette = "main", reverse = FALSE, ...) {
 #' @examples
 #' edi_scale_col("mixed", reverse = TRUE)
 edi_scale_col <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+
+  # Tests whether the size of the palette is not zero
+  if((length(palette) == 0)){
+    stop("Please pick at least one palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether the size of the palette is maximum one
+  if((length(palette) != 1)){
+    stop("Please pick just one palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether input palette is one of the three available options
+  if(!(palette %in% c("main", "blue", "mixed"))){
+    stop("Please pick from an existing palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether reverse is TRUE or FALSE
+  if(!(is.logical(reverse))){
+    stop("'reverse' argument is either TRUE or FALSE")
+  }
+
+  # Tests whether reverse is the right size
+  if((length(reverse) != 1)){
+    stop("'reverse' argument is either TRUE or FALSE")
+  }
+
+  # Tests whether discrete is TRUE or FALSE
+  if(!(is.logical(discrete))){
+    stop("'discrete' argument is either TRUE or FALSE")
+  }
+
+  # Tests whether discrete is the right size
+  if((length(discrete) != 1)){
+    stop("'discrete' argument is either TRUE or FALSE")
+  }
+
   pal <- edi_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
@@ -116,6 +189,42 @@ edi_scale_col <- function(palette = "main", discrete = TRUE, reverse = FALSE, ..
 #' @examples
 #' edi_scale_fill("mixed", discrete = FALSE, reverse = TRUE)
 edi_scale_fill <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+
+  # Tests whether the size of the palette is not zero
+  if((length(palette) == 0)){
+    stop("Please pick at least one palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether the size of the palette is maximum one
+  if((length(palette) != 1)){
+    stop("Please pick just one palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether input palette is one of the three available options
+  if(!(palette %in% c("main", "blue", "mixed"))){
+    stop("Please pick from an existing palette: Either 'main', 'blue' or 'mixed'")
+  }
+
+  # Tests whether reverse is TRUE or FALSE
+  if(!(is.logical(reverse))){
+    stop("'reverse' argument is either TRUE or FALSE")
+  }
+
+  # Tests whether reverse is the right size
+  if((length(reverse) != 1)){
+    stop("'reverse' argument is either TRUE or FALSE")
+  }
+
+  # Tests whether discrete is TRUE or FALSE
+  if(!(is.logical(discrete))){
+    stop("'discrete' argument is either TRUE or FALSE")
+  }
+
+  # Tests whether discrete is the right size
+  if((length(discrete) != 1)){
+    stop("'discrete' argument is either TRUE or FALSE")
+  }
+
   pal <- edi_pal(palette = palette, reverse = reverse)
 
   if (discrete) {

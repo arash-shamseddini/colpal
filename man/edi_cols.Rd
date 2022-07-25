@@ -8,7 +8,7 @@ edi_cols(...)
 }
 \arguments{
 \item{...}{Character names of "edi_cols_vec" vector: Any one of
-"Warm Blue", "Burnt Orange" or "Dark Blue"}
+"Warm Blue", "Burnt Orange" or "Dark Blue" or combination thereof}
 }
 \value{
 HEX code of the selected color
