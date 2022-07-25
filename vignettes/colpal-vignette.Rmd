@@ -1,12 +1,8 @@
 ---
-title: |
-  ![](images\logo.jpg){width=3in}
+title: "EDI Color Palette vignette"
 bibliography: references.bib
 link-citations: yes
 output: rmarkdown::html_vignette
-   # rmarkdown::toc: true
-   # rmarkdown::toc_float: true
-   # rmarkdown::number_sections: false
 vignette: >
   %\VignetteIndexEntry{EDI Color Palette vignette}
   %\VignetteEncoding{UTF-8}
