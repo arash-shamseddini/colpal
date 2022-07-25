@@ -14,7 +14,8 @@ edi_pal(palette = "main", reverse = FALSE, ...)
 \item{...}{Additional arguments to pass to colorRampPalette() function}
 }
 \value{
-Character of hex codes of the given palette
+An interim function which takes the number of the levels within interpolation
+as the input.  Eventually this returns a character of hex codes of the given palette
 }
 \description{
 Function to create a color spectrum of the given palette

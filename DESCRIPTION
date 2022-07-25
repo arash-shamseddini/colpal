@@ -13,11 +13,11 @@ Depends:
     R (>= 2.10)
 RoxygenNote: 7.2.0
 Suggests: 
-    ggplot2,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
+    ggplot2,
     grDevices
 VignetteBuilder: knitr
