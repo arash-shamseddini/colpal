@@ -139,7 +139,7 @@ and returns an interpolation of the given palette in form of hex codes.
 
 ```{r}
 
-# An example with edi_pal_fun with main palette and 9 levels
+# An example with edi_pal with main palette and 9 levels
 # edi_pal("main")(9)
 ```
 
@@ -150,105 +150,3 @@ This interpolation of hex codes belong to an spectrum shown in Figure \@ref(fig:
 # Embedding image
 knitr::include_graphics('images/main.jpg')
 ```
-
-
-It should be noted that `edi_pal_fun` is not directly used in the plotting codes and is employed within the following two functions.
-
-
-## `scale_edi_col` (Exported)
-
-This function constructs a color scale based on the EDI palettes which is in turn is based on the EDI colors. This is only used with a `ggplot` object and is added as an extra layer to the object.
-
-The `scale_edi_col` takes the following for the input:
-
-1- **One** of the EDI color palettes (e.g. "main", "blue", "mixed") as a **character** 
-
-2- A **boolean** (`reverse = TRUE/FALSE`) for reversing or not reversing the palette
-
-3- A **boolean** (`discrete = TRUE/FALSE`) for discrete or continuous color aesthetic
-
-and returns a **color** scale for the input palette. 
-
-In Figure \@ref(fig:ggplot-ex-2) and Figure \@ref(fig:ggplot-ex-3) two examples are demonstrated for `scale_edi_color_fun`.
-
-
-```{r ggplot-ex-2, fig.align='center', fig.cap='Sample ggplot with "mixed" discrete reversed colored palette'}
-
-# An example with scale_edi_col with mixed discrete palette in reverse order
-# mtcars$cyl <- as.factor(mtcars$cyl)
-# ggplot2::ggplot(mtcars, aes(x=(cyl), y=mpg, color = cyl)) + ggplot2::geom_boxplot() +
-#   ggplot2::ggtitle("Miles per Gallon vs No. of Cylinders") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("No. of Cylinders") + ggplot2::labs(color="No. of Cylinders") +
-#        scale_edi_col("mixed", reverse = TRUE)
-```
-
-
-```{r ggplot-ex-3, fig.align='center', fig.cap='Sample ggplot with "mixed" continuous reversed colored palette'}
-
-# An example with scale_edi_col with mixed continuous palette in reverse order
-# ggplot2::ggplot(mtcars, aes(wt, mpg, color = disp)) +
-#   ggplot2::geom_point(shape = 1, size = 5, stroke = 2) + 
-#   ggplot2::ggtitle("Miles per Gallon vs Weigth & Engine Displacement") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("Weigth (ton)") + ggplot2::labs(color = "Engine Displacement (cu. in.)") +
-#   scale_edi_col("mixed", discrete = FALSE, reverse = TRUE)
-```
-
-
-## `scale_edi_fill` (Exported)
-
-This function constructs a fill scale based on the EDI palettes which is in turn is based on the EDI colors. This is only used with a `ggplot` object and is added as an extra layer to the object.
-
-The `scale_edi_fill` takes the following for the input:
-
-1- **One** of the EDI color palettes (e.g. "main", "blue", "mixed") as a **character** 
-
-2- A **boolean** (`reverse = TRUE/FALSE`) for reversing or not reversing the palette
-
-3- A **boolean** (`discrete = TRUE/FALSE`) for discrete or continuous color aesthetic
-
-and returns a **fill** scale for the input palette. 
-
-In Figure \@ref(fig:ggplot-ex-4) and Figure \@ref(fig:ggplot-ex-5) two examples are demonstrated for `scale_edi_fill_fun`.
-
-```{r ggplot-ex-4, fig.align='center', fig.cap='Sample ggplot with "mixed" discrete reversed filled palette'}
-
-# An example with scale_edi_fill with mixed discrete palette in reverse order
-# mtcars$cyl <- as.factor(mtcars$cyl)
-# ggplot2::ggplot(mtcars, aes(x=(cyl), y=mpg, fill = cyl)) + ggplot2::geom_boxplot() +
-#   ggplot2::ggtitle("Miles per Gallon vs No. of Cylinders") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("No. of Cylinders") + ggplot2::labs(fill = "No. of Cylinders") +
-#        scale_edi_fill("mixed", reverse = TRUE)
-```
-
-
-```{r ggplot-ex-5, fig.align='center', fig.cap='Sample ggplot with "mixed" continuous reversed filled palette'}
-
-# An example with scale_edi_fill with mixed continuous palette in reverse order
-# ggplot2::ggplot(mtcars, aes(wt, mpg, fill = disp)) +
-#   ggplot2::geom_point(shape = 21, size = 5) + 
-#   ggplot2::ggtitle("Miles per Gallon vs Weigth & Engine Displacement") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("Weigth (ton)") + ggplot2::labs(fill ="Engine Displacement (cu. in.)") +
-#   scale_edi_fill("mixed", discrete = FALSE, reverse = TRUE)
-```
-
-
-# A Practical Example
-
-In order to draw a better picture of how EDI OCP can help with streamlining our plotting tasks, an example has been demonstrated in \@ref(fig:comparison-plot). This example is a summary plot borrowed (with permission) from a project I was recently involved in. Plots like this can be seen normally throughout EDI's typical internal/external reports.
-
-On the left-hand side is the plot with R default colors whereas on the right-hand side is the same plot to which EDI OCP has been applied.
-
-```{r comparison-plot, echo=FALSE, fig.align='center', fig.cap='Incorporting EDI OCP into a typical plot'}
-
-# Embedding image
-knitr::include_graphics('images/comparison.jpg')
-```
-
-
-Obviously, it is satisfying to be able to bring company's color themes into life with adding **just one line of code**.
-
-
-# Summary
-
-There are a lot of reasons why we would want to build an OCP to apply to our visualization products, the most important of which is EDI Brand Recognition. This document aims to build this OCP within the R environment and is technically the stepping stone towards packaging the palette.
-
-The expected result is that we will be able to create EDI-themed plots using a single line of code. Imagine how time efficient this application is!
-
-
-# References
