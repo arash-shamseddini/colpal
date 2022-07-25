@@ -140,7 +140,7 @@ and returns an interpolation of the given palette in form of hex codes.
 ```{r}
 
 # An example with edi_pal_fun with main palette and 9 levels
-edi_pal("main")(9)
+# edi_pal("main")(9)
 ```
 
 This interpolation of hex codes belong to an spectrum shown in Figure \@ref(fig:sample-palette-1).
@@ -175,20 +175,20 @@ In Figure \@ref(fig:ggplot-ex-2) and Figure \@ref(fig:ggplot-ex-3) two examples 
 ```{r ggplot-ex-2, fig.align='center', fig.cap='Sample ggplot with "mixed" discrete reversed colored palette'}
 
 # An example with scale_edi_col with mixed discrete palette in reverse order
-mtcars$cyl <- as.factor(mtcars$cyl)
-ggplot2::ggplot(mtcars, aes(x=(cyl), y=mpg, color = cyl)) + ggplot2::geom_boxplot() +
-  ggplot2::ggtitle("Miles per Gallon vs No. of Cylinders") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("No. of Cylinders") + ggplot2::labs(color="No. of Cylinders") +
-       scale_edi_col("mixed", reverse = TRUE)
+# mtcars$cyl <- as.factor(mtcars$cyl)
+# ggplot2::ggplot(mtcars, aes(x=(cyl), y=mpg, color = cyl)) + ggplot2::geom_boxplot() +
+#   ggplot2::ggtitle("Miles per Gallon vs No. of Cylinders") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("No. of Cylinders") + ggplot2::labs(color="No. of Cylinders") +
+#        scale_edi_col("mixed", reverse = TRUE)
 ```
 
 
 ```{r ggplot-ex-3, fig.align='center', fig.cap='Sample ggplot with "mixed" continuous reversed colored palette'}
 
 # An example with scale_edi_col with mixed continuous palette in reverse order
-ggplot2::ggplot(mtcars, aes(wt, mpg, color = disp)) +
-  ggplot2::geom_point(shape = 1, size = 5, stroke = 2) + 
-  ggplot2::ggtitle("Miles per Gallon vs Weigth & Engine Displacement") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("Weigth (ton)") + ggplot2::labs(color = "Engine Displacement (cu. in.)") +
-  scale_edi_col("mixed", discrete = FALSE, reverse = TRUE)
+# ggplot2::ggplot(mtcars, aes(wt, mpg, color = disp)) +
+#   ggplot2::geom_point(shape = 1, size = 5, stroke = 2) + 
+#   ggplot2::ggtitle("Miles per Gallon vs Weigth & Engine Displacement") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("Weigth (ton)") + ggplot2::labs(color = "Engine Displacement (cu. in.)") +
+#   scale_edi_col("mixed", discrete = FALSE, reverse = TRUE)
 ```
 
 
@@ -211,20 +211,20 @@ In Figure \@ref(fig:ggplot-ex-4) and Figure \@ref(fig:ggplot-ex-5) two examples 
 ```{r ggplot-ex-4, fig.align='center', fig.cap='Sample ggplot with "mixed" discrete reversed filled palette'}
 
 # An example with scale_edi_fill with mixed discrete palette in reverse order
-mtcars$cyl <- as.factor(mtcars$cyl)
-ggplot2::ggplot(mtcars, aes(x=(cyl), y=mpg, fill = cyl)) + ggplot2::geom_boxplot() +
-  ggplot2::ggtitle("Miles per Gallon vs No. of Cylinders") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("No. of Cylinders") + ggplot2::labs(fill = "No. of Cylinders") +
-       scale_edi_fill("mixed", reverse = TRUE)
+# mtcars$cyl <- as.factor(mtcars$cyl)
+# ggplot2::ggplot(mtcars, aes(x=(cyl), y=mpg, fill = cyl)) + ggplot2::geom_boxplot() +
+#   ggplot2::ggtitle("Miles per Gallon vs No. of Cylinders") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("No. of Cylinders") + ggplot2::labs(fill = "No. of Cylinders") +
+#        scale_edi_fill("mixed", reverse = TRUE)
 ```
 
 
 ```{r ggplot-ex-5, fig.align='center', fig.cap='Sample ggplot with "mixed" continuous reversed filled palette'}
 
 # An example with scale_edi_fill with mixed continuous palette in reverse order
-ggplot2::ggplot(mtcars, aes(wt, mpg, fill = disp)) +
-  ggplot2::geom_point(shape = 21, size = 5) + 
-  ggplot2::ggtitle("Miles per Gallon vs Weigth & Engine Displacement") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("Weigth (ton)") + ggplot2::labs(fill ="Engine Displacement (cu. in.)") +
-  scale_edi_fill("mixed", discrete = FALSE, reverse = TRUE)
+# ggplot2::ggplot(mtcars, aes(wt, mpg, fill = disp)) +
+#   ggplot2::geom_point(shape = 21, size = 5) + 
+#   ggplot2::ggtitle("Miles per Gallon vs Weigth & Engine Displacement") + ggplot2::ylab("Miles per Gallon") + ggplot2::xlab("Weigth (ton)") + ggplot2::labs(fill ="Engine Displacement (cu. in.)") +
+#   scale_edi_fill("mixed", discrete = FALSE, reverse = TRUE)
 ```
 
 
