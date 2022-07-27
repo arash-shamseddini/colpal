@@ -26,6 +26,11 @@ edi_cols <- function(...) {
 
   cols <- c(...)
 
+  # Tests whether input length is always one
+  if(is.null(cols)){
+    stop("Please pick just one EDI color: 'Warm Blue', 'Burnt Orange' or 'Dark Blue'")
+  }
+
   # Tests whether input length is maximum three
   if(length(cols) > 3){
     stop("Please pick at most three EDI colors: 'Warm Blue', 'Burnt Orange' or 'Dark Blue'")
@@ -33,10 +38,8 @@ edi_cols <- function(...) {
 
   # Tests whether input is one of the three available options
   if(!('Warm Blue' %in% cols) & !('Burnt Orange' %in% cols) & !('Dark Blue' %in% cols)){
-    stop("Please pick an EDI color: 'Warm Blue', 'Burnt Orange' or 'Dark Blue' or their combination")
+    stop("Please pick an EDI color: 'Warm Blue', 'Burnt Orange', 'Dark Blue' or their combinations")
   }
-
-  if (is.null(cols)) return (edi_cols_vec)
 
   edi_cols_vec[cols]
 }
@@ -88,11 +91,6 @@ edi_pal <- function(palette = "main", reverse = FALSE, ...) {
     stop("'reverse' argument is either TRUE or FALSE")
   }
 
-  # Tests whether reverse is the right size
-  if((length(reverse) != 1)){
-    stop("'reverse' argument is either TRUE or FALSE")
-  }
-
   pal <- edi_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
@@ -138,18 +136,8 @@ edi_scale_col <- function(palette = "main", discrete = TRUE, reverse = FALSE, ..
     stop("'reverse' argument is either TRUE or FALSE")
   }
 
-  # Tests whether reverse is the right size
-  if((length(reverse) != 1)){
-    stop("'reverse' argument is either TRUE or FALSE")
-  }
-
   # Tests whether discrete is TRUE or FALSE
   if(!(is.logical(discrete))){
-    stop("'discrete' argument is either TRUE or FALSE")
-  }
-
-  # Tests whether discrete is the right size
-  if((length(discrete) != 1)){
     stop("'discrete' argument is either TRUE or FALSE")
   }
 
@@ -210,18 +198,8 @@ edi_scale_fill <- function(palette = "main", discrete = TRUE, reverse = FALSE, .
     stop("'reverse' argument is either TRUE or FALSE")
   }
 
-  # Tests whether reverse is the right size
-  if((length(reverse) != 1)){
-    stop("'reverse' argument is either TRUE or FALSE")
-  }
-
   # Tests whether discrete is TRUE or FALSE
   if(!(is.logical(discrete))){
-    stop("'discrete' argument is either TRUE or FALSE")
-  }
-
-  # Tests whether discrete is the right size
-  if((length(discrete) != 1)){
     stop("'discrete' argument is either TRUE or FALSE")
   }
 
