@@ -61,7 +61,7 @@ Please note that the `colpal` project is released with a [Contributor Code of Co
 
 ## Contributors
 
-We welcome and recognize all contributions.
+All contributions are welcome and recognized. Below is the core contributors to this package.
 
 |  	 Core contributor| Github.com username| Affiliation|Email Address|
 |---------|---|---|

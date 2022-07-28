@@ -67,7 +67,8 @@ By contributing to this project, you agree to abide by its terms.
 
 ## Contributors
 
-We welcome and recognize all contributions.
+All contributions are welcome and recognized. Below is the core
+contributors to this package.
 
 | Core contributor  | Github.com username            | Affiliation                 |
 |-------------------|--------------------------------|-----------------------------|
