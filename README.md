@@ -10,17 +10,33 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/arash-shamseddini/colpal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/arash-shamseddini/colpal/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of colpal is to …
+At [Environmental Dynamic Inc.](https://edynamics.com/) (EDI) there is a
+growing tendency in using R for creating data summary and plotting. This
+has been the driving force behind the idea of creating `colpal`. In a
+nutshell, `colpal` brings in EDI colors into all the visualizations
+within R landscape to not only unify these effort but also help with
+EDI’s “Brand Recognition”.
+
+Either you are using [base
+R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)
+or [ggplot2](https://ggplot2.tidyverse.org/index.html), you can add EDI
+corporate color themes with simply a single line of code using `colpal`
+functions.
 
 ## Installation
 
-You can install the development version of colpal from
+You can install the development version of `colpal` from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("arash-shamseddini/colpal")
 ```
+
+## Documentation & Usage
+
+Documentation and usage examples for `colpal` can be found
+[here](https://github.com/arash-shamseddini/colpal/tree/main/vignettes).
 
 ## Example
 
@@ -30,35 +46,29 @@ This is a basic example which shows you how to solve a common problem:
 library(colpal)
 library(ggplot2)
 
-# Creating a sample bar plot using edi_cols function
-ggplot(mpg, aes(x = class)) + geom_bar(fill = edi_cols("Warm Blue")) + # Using Warm Blue (as EDI Primary color)
-  ggtitle("Number of cars in each class") +
-  ylab("Count") + xlab("Class") +                                                   
-  theme(axis.line = element_line(),   # Removing grids, background color & borders
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.border = element_blank(),
-        panel.background = element_blank())
+mtcars$cyl <- as.factor(mtcars$cyl)
+ggplot(mtcars, aes(x=(cyl), y=mpg, color = cyl)) + 
+  geom_boxplot() +
+  ggtitle("Miles per Gallon vs No. of Cylinders") + 
+  ylab("Miles per Gallon") + 
+  xlab("No. of Cylinders") + 
+  labs(color="No. of Cylinders") +
+  edi_scale_col("mixed", reverse = TRUE)
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Code of Conduct
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+Please note that the `colpal` project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+## Contributors
+
+We welcome and recognize all contributions.
+
+| Core contributor  | Github.com username            | Affiliation                |
+|-------------------|--------------------------------|----------------------------|
+| Arash Shamseddini | @arash-shamseddini/@arashshams | Environmental Dynamic Inc. |
