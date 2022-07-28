@@ -1,37 +1,65 @@
-## Welcome to GitHub Pages
+## Welcome to colpal package
 
-You can use the [editor on GitHub](https://github.com/arash-shamseddini/colpal/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+At [Environmental Dynamics Inc.](https://edynamics.com/) (EDI) there is
+a growing tendency in using R for creating data summary and plotting.
+This has been the driving force behind the idea of creating `colpal`. In
+a nutshell, `colpal` brings in EDI colors into all the visualizations
+within R landscape to not only unify these effort but also help with
+EDI’s “Brand Recognition”.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Either you are using [base
+R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)
+or [ggplot2](https://ggplot2.tidyverse.org/index.html), you can add EDI
+corporate color themes with simply a single line of code using `colpal`
+functions.
 
-### Markdown
+## Installation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+You can install the development version of `colpal` from
+[GitHub](https://github.com/) with:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+``` r
+# install.packages("devtools")
+devtools::install_github("arash-shamseddini/colpal")
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Documentation & Usage
 
-### Jekyll Themes
+Documentation and usage examples for `colpal` can be found
+[here](https://github.com/arash-shamseddini/colpal/tree/main/vignettes).
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/arash-shamseddini/colpal/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Example
 
-### Support or Contact
+This is a basic example which shows you how to solve a common problem:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+``` r
+library(colpal)
+library(ggplot2)
+
+mtcars$cyl <- as.factor(mtcars$cyl)
+ggplot(mtcars, aes(x=(cyl), y=mpg, color = cyl)) + 
+  geom_boxplot() +
+  ggtitle("Miles per Gallon vs No. of Cylinders") + 
+  ylab("Miles per Gallon") + 
+  xlab("No. of Cylinders") + 
+  labs(color="No. of Cylinders") +
+  edi_scale_col("mixed", reverse = TRUE)
+```
+
+<img src="man/figures/README-example-1.png" width="100%" />
+
+## Code of Conduct
+
+Please note that the `colpal` project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
+
+## Contributors
+
+All contributions are welcome and recognized. Below is the core
+contributors to this package.
+
+| Core contributor  | Github.com username            | Affiliation                 |
+|-------------------|--------------------------------|-----------------------------|
+| Arash Shamseddini | @arash-shamseddini/@arashshams | Environmental Dynamics Inc. |
