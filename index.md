@@ -1,6 +1,6 @@
 ## Welcome to colpal package
 
-<a href="https://edynamics.com/"><img src="images/logo.PNG" align="right" height="139" /></a>
+<a href="https://edynamics.com/"><img src="images/logo.png" align="right" height="139" /></a>
 
 At [Environmental Dynamics Inc.](https://edynamics.com/) (EDI) there is
 a growing tendency in using R for creating data summary and plotting.
@@ -48,7 +48,7 @@ ggplot(mtcars, aes(x=(cyl), y=mpg, color = cyl)) +
   edi_scale_col("mixed", reverse = TRUE)
 ```
 
-<a href="https://edynamics.com/"><img src="images/README-example-1.png" align="right" height="139" /></a>
+<img src="images/README-example-1.png" align="center" />
 
 ## Code of Conduct
 
