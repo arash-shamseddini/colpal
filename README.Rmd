@@ -16,11 +16,11 @@ knitr::opts_chunk$set(
 # colpal <a href="https://edynamics.com/"><img src="man/figures/logo.PNG" align="right" height="139" /></a>
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/arash-shamseddini/colpal/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/arash-shamseddini/colpal/actions/workflows/R-CMD-check.yaml)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 <!-- badges: end -->
 
-At [Environmental Dynamic Inc.](https://edynamics.com/) (EDI) there is a growing tendency in using R for creating data summary and plotting. This has been the driving force behind the idea of creating `colpal`. In a nutshell, `colpal` brings in EDI colors into all the visualizations within R landscape to not only unify these effort but also help with EDI's "Brand Recognition".
+At [Environmental Dynamics Inc.](https://edynamics.com/) (EDI) there is a growing tendency in using R for creating data summary and plotting. This has been the driving force behind the idea of creating `colpal`. In a nutshell, `colpal` brings in EDI colors into all the visualizations within R landscape to not only unify these effort but also help with EDI's "Brand Recognition".
 
 Either you are using [base R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html) or [ggplot2](https://ggplot2.tidyverse.org/index.html), you can add EDI corporate color themes with simply a single line of code using `colpal` functions.
 
@@ -63,6 +63,6 @@ Please note that the `colpal` project is released with a [Contributor Code of Co
 
 We welcome and recognize all contributions.
 
-|  	 Core contributor| Github.com username| Affiliation|
+|  	 Core contributor| Github.com username| Affiliation|Email Address|
 |---------|---|---|
-|  Arash Shamseddini | @arash-shamseddini/@arashshams| Environmental Dynamic Inc.|
+|  Arash Shamseddini | @arash-shamseddini/@arashshams| Environmental Dynamics Inc.|ashamseddini@edynamics.com|
