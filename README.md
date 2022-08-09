@@ -30,8 +30,7 @@ You can install the development version of `colpal` from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("arash-shamseddini/colpal")
-This should be revised.
+devtools::install_github("environmentaldynamicsinc/colpal")
 ```
 
 ## Documentation & Usage
