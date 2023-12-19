@@ -49,8 +49,8 @@ The color specifications are listed in Table 1 and presented in Figure 1.
 |          | Primary - Warm Blue | Secondary - Burnt Orange  | Tertiary – Dark Blue   |
 |:--------------|:---------:|:---------:|:-----------:|
 | **Pantone**  |  633 |        173  | 3025   |
-|**RGB**      |  98, 6, 10, 29   |          207, 69, 32  | 0, 79, 113   |
-|**CMYK**      |  0, 115, 150  |          0, 67, 85, 19   | 100, 27, 10, 56    |
+|**RGB**      |  0, 115, 150   |          207, 69, 32  | 0, 79, 113   |
+|**CMYK**      |  98, 6, 10, 29  |          0, 67, 85, 19   | 100, 27, 10, 56    |
 |**Hex**      |  #007396   |          #CF4520   | #004F71    |
 |**Vinyl**      |  TBD   |          TBD   | TBD    |
 
